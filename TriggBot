@@ -1,6 +1,3 @@
--- [[ 
-Made With GrabNobody.AI
-]]--
 
 
     local currPlayer = game:GetService('Players').LocalPlayer
@@ -28,3 +25,15 @@ Made With GrabNobody.AI
     trigBot()
     end)
 end)
+
+wait(3)
+
+local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+
+MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Terminal", Description = "Do You Like This So Far?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+   if (res == "Yes") then
+       MessageBox.Show({MessageBoxButtons = "Yeah!", Description = "Wow, Thanks for the reply!", Text = "Terminal"})
+   elseif (res == "No") then
+       MessageBox.Show({MessageBoxButtons = "No.", Description = "Im sorry about that, if its broken ill try to fix it!", Text = "Terminal"})
+   end
+end})
