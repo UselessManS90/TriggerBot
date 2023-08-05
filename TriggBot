@@ -153,6 +153,8 @@ wait(0.25);
 Core:Destroy()
 
 wait(2)
+    pcall(function()
+    wait(2)
     local currPlayer = game:GetService('Players').LocalPlayer
     local servPlayer = game:GetService('Players')
     local currPlayerCharacter = currPlayer.Character or currPlayer.CharacterAdded:wait()
@@ -160,7 +162,6 @@ wait(2)
     local currCamera = game:GetService("Workspace").CurrentCamera
 
     local RunService = game:GetService("RunService")
-
 
     function trigBot()
         local ScreenPoint = currCamera:ScreenPointToRay(currMouse.X, currMouse.Y)
@@ -175,7 +176,7 @@ wait(2)
     end
 
     RunService.Stepped:Connect(function()
-    trigBot()
+        trigBot()
     end)
 end)
 
