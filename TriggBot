@@ -2,6 +2,8 @@
 Credits to XHepct for Notification UI and Xiba for Loader!
 ]]--
 
+-- Loader by Xiba
+
 local Metadata = {
 	LoaderData = {
 		Name = (shared.LoaderTitle or 'A Loader'),
@@ -152,6 +154,10 @@ tweenObject(Main, 0.25, {
 wait(0.25);
 Core:Destroy()
 
+-- end of loader
+
+-- triggerbot
+
 wait(2)
     pcall(function()
     wait(2)
@@ -191,3 +197,5 @@ MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Terminal", Descripti
        MessageBox.Show({MessageBoxButtons = "No.", Description = "Im sorry about that, if its broken ill try to fix it!", Text = "Terminal"})
    end
 end})
+
+-- end of triggerbot
